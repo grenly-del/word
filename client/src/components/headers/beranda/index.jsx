@@ -4,21 +4,19 @@ import { FaCopy, FaPaste  } from "react-icons/fa";
 
 import './style.css'
 
+
 const Beranda = () => {
+
     const refElement = {
         a: useRef(null),
         b: useRef(null),
         c: useRef(null)
     }
 
-    const [nilai, setNilai] = useState({
-        a: '',
-        b: '',
-        c: ''
-    })
 
     const handleClick = (e) => {
         const target = e.target
+        e.preventDefault()
 
         // Toggle 'active' class on the clicked element
         target.classList.toggle('active');
@@ -38,7 +36,10 @@ const Beranda = () => {
         
     }
 
-   
+   useEffect(() => {
+        //reload satu kali
+        // window.location.reload();
+   }, [])
 
     return  (
         <div className='flex bg-[#eee] px-8 relative w-full h-full py-4'>

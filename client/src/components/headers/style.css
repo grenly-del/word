@@ -1,0 +1,10 @@
+/* #manu.active::parentElement {
+    background-color: #eee;
+    color: #3f3f3f;
+} */
+
+
+#parent-menu li.active {
+    background-color: #eee;
+    color: #0f4269
+}
